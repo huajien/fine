@@ -106,6 +106,6 @@ jobs:
             artifacts/**
           token: ${{ secrets.FINE }}
           body: |
-            feat: 小程序信息规则分类 #47 @VSolitus。 这个GitHub打包只需要打包mac amd 版本的其他的不需要打包
+            feat: 小程序信息规则分类 #47 @VSolitus。 这个GitHub打包只需要打包mac amd 版本的其他的不需要打包 打包修复小程序打不开路径
 
 
