@@ -2,12 +2,10 @@ name: Fine release
 
 on:
   push:
-    tags:
-      - '*'
+    branches:
+      - 'main'
 
 env:
-  # Necessary for most environments as build failure can occur due to OOM issues
-#  NODE_OPTIONS: "--max-old-space-size=4096"
   go-version: '1.24.0'
   node-version: '18'
   wails-version: 'latest'
@@ -15,7 +13,6 @@ env:
 jobs:
   build:
     strategy:
-      # true: 一个失败全终止
       fail-fast: true
       matrix:
         build:
@@ -109,4 +106,6 @@ jobs:
             artifacts/**
           token: ${{ secrets.FINE }}
           body: |
-            feat: 小程序信息规则分类 #47 @VSolitus。
+            feat: 小程序信息规则分类 #47 @VSolitus。 这个GitHub打包只需要打包mac amd 版本的其他的不需要打包
+
+
